@@ -1,0 +1,44 @@
+{% include 'layout.html' %}
+
+<div class="container">
+    <div class="card text-center flex-row mx-auto px-0 col-lg-10 col-xl-9">
+        <div class="card-body text-center">
+
+            <h2 class="title mb-2">
+                Create your new task!
+            </h2>
+
+            <div class="card-body">
+
+                <form class="form-box px-3" method="post">
+                    <div class="form-input">
+                        <input type="text" class="form-control" placeholder="Title" name="title" required>
+                    </div>
+
+                    <div class="form-input">
+                        <textarea name="description" placeholder="Description" class="form-control" rows="3"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-input">
+                        <h4>Priority</h4>
+                        <select name="priority" class="form-control mt-3 mb-4">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-block text-uppercase">
+                            Create new todo
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

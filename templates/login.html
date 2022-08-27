@@ -1,0 +1,74 @@
+{% include 'layout.html' %}
+
+<div class="container">
+    <div class="row px-3">
+        <div class="card flex-row mx-auto px-0 col-lg-10 col-xl-9">
+
+            <div class="card-body">
+                <h4 class="text-center mt-4 mb-3">
+                    Login into account
+                </h4>
+
+                {% if msg %}
+
+                {% if msg == 'Logout Successful' or msg == 'User successfully created' %}
+
+                <div class="alert alert-success" role="alert">
+                    {{msg}}
+                </div>
+
+                {% else %}
+
+                <div class="alert alert-danger" role="alert">
+                    {{msg}}
+                </div>
+
+                {% endif %}
+                {% endif %}
+
+                <form class="form-box px-3" method="post" action="/auth">
+                    <div class="form-input">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                        </span>
+
+                        <input type="text" name="username" placeholder="Username" tabindex="10" required>
+                    </div>
+
+                    <div class="form-input">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-key" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z" />
+                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                            </svg>
+                        </span>
+
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-block text-uppercase">
+                            Login
+                        </button>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="text-center mb-2">
+                        Don't have an account?
+                        <a href="register" class="register-link">
+                            Register here
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

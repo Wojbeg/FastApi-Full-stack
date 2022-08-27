@@ -1,0 +1,108 @@
+body {
+  background-color: #EEE;
+}
+
+.navbar {
+  background-color: #007bff;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.card {
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-input {
+  position: relative;
+}
+.form-input input {
+  width: 100%;
+  height: 45px;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.1254901961);
+  border-radius: 50px;
+  outline: none;
+  background: transparent;
+}
+.form-input textarea {
+  width: 100%;
+  height: 45px;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.1254901961);
+  border-radius: 50px;
+  outline: none;
+  background: transparent;
+}
+.form-input select {
+  width: 100%;
+  height: 45px;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.1254901961);
+  border-radius: 50px;
+  outline: none;
+  background: transparent;
+}
+.form-input span {
+  position: absolute;
+  top: 10px;
+  padding-left: 15px;
+  color: #007bff;
+}
+
+.form-box button {
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background: #007bff;
+  color: #fff;
+  font-size: 90%;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+  padding: 12px;
+}
+.form-box button[type=button] {
+  background: rgb(254, 88, 88);
+}
+.form-box button[type=button]:hover {
+  background: rgb(202, 69, 69);
+}
+.form-box button[type=submit]:hover {
+  background: #0069d9;
+}
+
+.btn-blue {
+  background-color: #007bff;
+}
+.btn-blue:hover {
+  background-color: #0069d9;
+}
+
+.list input:not([type=radio]):not([type=checkbox]), button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: initial;
+}
+
+.strike-through-td {
+  text-decoration: line-through;
+}/*# sourceMappingURL=style.css.map */

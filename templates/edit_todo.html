@@ -1,0 +1,43 @@
+{% include 'layout.html' %}
+
+<div class="container">
+    <div class="card text-center flex-row mx-auto px-0 col-lg-10 col-xl-9">
+        <div class="card-body text-center">
+
+            <h2 class="mb-2">
+                Let's edit your task!
+            </h2>
+
+            <div class="card-body">
+                <form class="form-box px-3" method="post">
+                    <div class="form-input">
+                        <input type="text" class="form-control" value="{{todo.title}}" name="title" required>
+                    </div>
+
+                    <div class="form-input">
+                        <textarea name="description" placeholder="Description" class="form-control" rows="3" required>{{todo.description}}
+                            </textarea>
+                    </div>
+
+                    <div class="form-input">
+                        <h4>Priority</h4>
+                        <select name="priority" class="form-control mt-3 mb-4">
+                            <option {% if todo.priority==1 %} selected="selected" {% endif %}>1</option>
+                            <option {% if todo.priority==2 %} selected="selected" {% endif %}>2</option>
+                            <option {% if todo.priority==3 %} selected="selected" {% endif %}>3</option>
+                            <option {% if todo.priority==4 %} selected="selected" {% endif %}>4</option>
+                            <option {% if todo.priority==5 %} selected="selected" {% endif %}>5</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Edit your todo</button>
+                        <button onclick="window.location.href='/todos/delete/{{todo.id}}'" type="button"
+                            class="btn btn-danger">Delete</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
